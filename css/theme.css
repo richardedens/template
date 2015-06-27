@@ -1,0 +1,27 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin';
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+	font-family: Lato, sans-serif;
+}
+
+.life1 {
+	background-image: url(../img/life_green.jpg);
+	background-size: cover;
+}
+.life2 {
+	background-image: url(../img/life_zen.jpg);
+	background-size: cover;
+}
+.life3 {
+	background-image: url(../img/live_other.jpg);
+	background-size: cover;
+}

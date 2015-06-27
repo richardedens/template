@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html data-ng-app="template">
+	<head>
+		{{header.html}}
+	</head>
+	<body data-ng-controller="templateController">
+		<!-- Container -->
+		{{navbar.html}}
+
+		<!-- Carousel -->
+		{{carousel.html}}
+
+		<!-- Marketing messaging and featurettes -->
+		<div class="container marketing">
+
+			{{marketing.html}}
+			<!-- START THE FEATURETTES -->
+			{{features.html}}
+			<!-- /END THE FEATURETTES -->
+			<!-- FOOTER -->
+			{{footer.html}}
+
+		</div><!-- /.container -->
+
+		<!-- Login -->
+		<script type="text/ng-template" id="login.html">
+			<div class="modal-header">
+				<h3 class="modal-title">Login</h3>
+			</div>
+			<div class="modal-body">
+				<ul>
+					<li ng-repeat="item in items">
+						<a ng-click="selected.item = item">{{ item }}</a>
+					</li>
+				</ul>
+				Selected: <b>{{ selected.item }}</b>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" ng-click="ok()">OK</button>
+				<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+			</div>
+		</script>
+
+		<script src="ckeditor/ckeditor.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="js/ui-bootstrap-0.13.0.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
