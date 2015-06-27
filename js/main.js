@@ -3,7 +3,7 @@
 	'use strict';
 
 	var app = angular.module('template', ['ui.bootstrap']);
-
+	
 	app.controller('templateController', ['$scope', function ($scope, $modal, $log) {
 		$scope.double = function (value) {
 			return value * 2;
@@ -28,22 +28,6 @@
 				$log.info('Modal dismissed at: ' + new Date());
 			});
 		};
-
-		$scope.carouselInterval = 4000;
-
-		$scope.slides = [];
-		$scope.slides.push({
-			image: 'img/life_green.jpg',
-			text: 'Text 1'
-		});
-		$scope.slides.push({
-			image: 'img/life_zen.jpg',
-			text: 'Text 2'
-		});
-		$scope.slides.push({
-			image: 'img/life_other.jpg',
-			text: 'Text 3'
-		});
 
 	}]);
 
