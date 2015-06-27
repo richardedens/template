@@ -1,0 +1,27 @@
+<h1><%= name %></h1>
+<table class="table table-hover table-condensed table-stripped">
+    <thead>
+        <tr>
+            <% _.each(fields, function(field) { %>
+            <th><span><%= field.label %></span></th>
+            <% }); %>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <% _.each(fields, function(field) { %>
+            <td><input class="form-control" id="[component.id]_<%= field.name %>" type="text" <% if (field.tag.placeholder) { %>placeholder="<%= field.tag.placeholder %>"<% } %>/></td>
+            <% }); %>
+        </tr>
+        <tr>
+            <% _.each(fields, function(field) { %>
+            <td>&nbsp;</td>
+            <% }); %>
+        </tr>
+        <tr>
+            <% _.each(fields, function(field) { %>
+            <td><input class="form-control" id="[component.id]_<%= field.name %>" type="text" <% if (field.tag.placeholder) { %>placeholder="<%= field.tag.placeholder %>"<% } %>/></td>
+            <% }); %>
+        </tr>
+    </tbody>
+</table>

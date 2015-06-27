@@ -1,0 +1,59 @@
+{
+    "name": "googlemaps",
+    "settings": {
+        "userRights": {
+            "Administrator": "rw",
+            "User": "rw"
+        }
+    },
+    "fields": [
+        {
+            "name": "url",
+            "label": "maps fullurl",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "text",
+                "placeholder": "The full url to google maps that you can use to enclose."
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "width",
+            "label": "maps width",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "text",
+                "placeholder": "The width of the iframe of google maps."
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "height",
+            "label": "maps height",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "text",
+                "placeholder": "The height of the iframe of google maps."
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "name": "youtube",
+    "settings": {
+        "userRights": {
+            "Administrator": "rw",
+            "User": "rw"
+        }
+    },
+    "fields": [
+        {
+            "name": "videoid",
+            "label": "video id",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "text",
+                "placeholder": "The video id used inside youtube."
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        }
+    ]
+}

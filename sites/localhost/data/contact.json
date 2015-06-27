@@ -1,0 +1,95 @@
+{
+    "name": "contact",
+    "settings": {
+        "userRights": {
+            "Administrator": "rw",
+            "User": "rw"
+        }
+    },
+    "fields": [
+        {
+            "name": "comment",
+            "label": "Uw vraag",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "textarea",
+                "placeholder": "Vertel ons uw vraag?"
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "name",
+            "label": "Uw naam",
+            "tag": {
+                "name": "input",
+                "type": "text",
+                "placeholder": "Vul hier uw naam in."
+            },
+            "dbtype": "STRING",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "email",
+            "label": "Email",
+            "tag": {
+                "name": "input",
+                "type": "text",
+                "placeholder": "Vul hier uw email adres in."
+            },
+            "dbtype": "STRING",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "company",
+            "label": "Bedrijfsnaam*",
+            "tag": {
+                "name": "input",
+                "type": "text",
+                "placeholder": "Vul hier uw bedrijfsnaam in."
+            },
+            "dbtype": "STRING",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "telephone",
+            "label": "Telefoonnummer",
+            "tag": {
+                "name": "input",
+                "type": "text",
+                "placeholder": "Vul hier uw telefoonnummer in."
+            },
+            "dbtype": "STRING",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        }
+    ]
+}

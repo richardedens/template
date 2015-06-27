@@ -1,0 +1,40 @@
+{
+    "actions": [
+        {
+            "type": "createObject",
+            "params": {
+                "name": "product"
+            },
+            "variable": "NewProduct"
+        },
+        {
+            "type": "changeObject",
+            "params": {
+                "variable": "NewProduct",
+                "set": [
+                    {
+                        "name": "name",
+                        "value": "1x set driftbanden"
+                    },
+                    {
+                        "name": "price",
+                        "value": 199
+                    }
+                ]
+            }
+        },
+        {
+            "type": "commitObject",
+            "params": {
+                "variable": "NewProduct"
+            }
+        },
+        {
+            "type": "return",
+            "params": {
+                "value": "object",
+                "variable": "NewProduct"
+            }
+        }
+    ]
+}

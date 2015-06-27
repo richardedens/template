@@ -1,0 +1,12 @@
+<form>
+    <h1><%= name %></h1>
+    <% _.each(fields, function(field) { %>
+        <div class="form-group">
+            <label for="[component.id]_<%= field.name %>"><%= field.label %></label>
+            <<%= field.tag.name %> class="form-control" id="[component.id]_<%= field.name %>" <% if (field.tag.type) { %>type="<%= field.tag.type %>"<% } %> <% if (field.tag.placeholder) { %>placeholder="<%= field.tag.placeholder %>"<% } %>/>
+        </div>
+    <% }); %>
+    <div class="recaptcha [component.id]"></div>
+    <br>
+    <button id="[component.id]_submit" class="btn btn-primary mx-submit">submit</button>
+</form>

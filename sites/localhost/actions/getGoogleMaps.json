@@ -1,0 +1,44 @@
+{
+    "actions": [
+        {
+            "type": "createObject",
+            "params": {
+                "name": "googlemaps"
+            },
+            "variable": "NewGoogleMaps"
+        },
+        {
+            "type": "changeObject",
+            "params": {
+                "variable": "NewGoogleMaps",
+                "set": [
+                    {
+                        "name": "url",
+                        "value": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.025627400336!2d5.7054621!3d52.53297049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c62af804c48d73%3A0xd5432db93e242c44!2sCarolusgulden+4%2C+8253+DB+Dronten!5e0!3m2!1snl!2snl!4v1434135811073"
+                    },
+                    {
+                        "name": "width",
+                        "value": "320"
+                    },
+                    {
+                        "name": "height",
+                        "value": "240"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "commitObject",
+            "params": {
+                "variable": "NewGoogleMaps"
+            }
+        },
+        {
+            "type": "return",
+            "params": {
+                "value": "object",
+                "variable": "NewGoogleMaps"
+            }
+        }
+    ]
+}

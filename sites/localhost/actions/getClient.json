@@ -1,0 +1,36 @@
+{
+    "actions": [
+        {
+            "type": "createObject",
+            "params": {
+                "name": "clients"
+            },
+            "variable": "NewClient"
+        },
+        {
+            "type": "changeObject",
+            "params": {
+                "variable": "NewClient",
+                "set": [
+                    {
+                        "name": "firstname",
+                        "value": "Gerhard Richard Edens"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "commitObject",
+            "params": {
+                "variable": "NewClient"
+            }
+        },
+        {
+            "type": "return",
+            "params": {
+                "value": "object",
+                "variable": "NewClient"
+            }
+        }
+    ]
+}

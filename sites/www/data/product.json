@@ -1,0 +1,44 @@
+{
+    "name": "product",
+    "settings": {
+        "userRights": {
+            "Administrator": "rw",
+            "User": "rw"
+        }
+    },
+    "fields": [
+        {
+            "name": "name",
+            "label": "Naam",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "text",
+                "placeholder": "De naam van het product"
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "price",
+            "label": "Prijs",
+            "tag": {
+                "name": "input",
+                "type": "number",
+                "placeholder": "De prijs van het product."
+            },
+            "dbtype": "FLOAT",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        }
+    ]
+}

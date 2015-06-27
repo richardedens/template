@@ -1,0 +1,12 @@
+{
+    actions: [
+        {
+            "type": "save",
+            "data": "clients"
+        },
+        {
+            "type": "showPage",
+            "page": "result.html"
+        }
+    ]
+}

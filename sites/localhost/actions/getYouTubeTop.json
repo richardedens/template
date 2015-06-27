@@ -1,0 +1,36 @@
+{
+    "actions": [
+        {
+            "type": "createObject",
+            "params": {
+                "name": "youtube"
+            },
+            "variable": "NewYouTube"
+        },
+        {
+            "type": "changeObject",
+            "params": {
+                "variable": "NewYouTube",
+                "set": [
+                    {
+                        "name": "videoid",
+                        "value": "zAxSV4lH07A"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "commitObject",
+            "params": {
+                "variable": "NewYouTube"
+            }
+        },
+        {
+            "type": "return",
+            "params": {
+                "value": "object",
+                "variable": "NewYouTube"
+            }
+        }
+    ]
+}

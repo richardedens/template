@@ -1,0 +1,61 @@
+{
+    "name": "clients",
+    "settings": {
+        "userRights": {
+            "Administrator": "rw",
+            "User": "rw"
+        }
+    },
+    "fields": [
+        {
+            "name": "comment",
+            "label": "Uw vraag",
+            "dbtype": "STRING",
+            "tag": {
+                "name": "textarea",
+                "placeholder": "Vertel ons uw vraag?"
+            },
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "firstname",
+            "label": "Voornaam",
+            "tag": {
+                "name": "input",
+                "type": "text",
+                "placeholder": "Uw voornaam kunt u hier in typen."
+            },
+            "dbtype": "STRING",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        },
+        {
+            "name": "lastname",
+            "label": "Achternaam",
+            "tag": {
+                "name": "input",
+                "type": "text",
+                "placeholder": "Uw achternaam kunt u hier in typen."
+            },
+            "dbtype": "STRING",
+            "settings": {
+                "required": true,
+                "userRights": {
+                    "Administrator": "rw",
+                    "User": "rw"
+                }
+            }
+        }
+    ]
+}
