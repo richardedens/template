@@ -3,7 +3,11 @@
 	'use strict';
 
 	// Define main mango AngularJS app.
-	var app = angular.module('mango', ['ui.bootstrap']);
+	var app = angular.module('mango', ['ui.bootstrap']).config(function ($sceProvider) {
+		// Completely disable SCE.  For demonstration purposes only!
+		// Do not use in new projects.
+		$sceProvider.enabled(false);
+	});
 
 	// Create a factory to get data from the database for the main mango controller.
 	app.factory('mangoDataSource', function ($http) {
@@ -187,7 +191,7 @@
 			replace: true
 		};
 	});
-	
+
 	app.directive('mangoImageGalary', function () {
 		return {
 			restrict: 'E',
@@ -228,6 +232,53 @@
 				};
 			},
 			template: '<img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}">',
+			replace: true
+		};
+	});
+
+
+	app.directive('mangoGoogleMaps', function ($compile) {
+		return {
+			restrict: 'E',
+			transclude: true,
+			scope: { title: '@', id: '@', action: '@' },
+			controller: function ($scope, $element) {
+
+				$compile.aHrefSanitizationWhitelist = /^\s*(https?|ftp|mailto|file):/;
+
+				if (typeof $scope.id !== 'undefined' && $scope.id !== null && $scope.id !== '') {
+					if (typeof $scope.action !== 'undefined' && $scope.action !== null && $scope.action !== '') {
+						// Async load actions
+						mango.actions.get($scope.action, function (err, actions, args) {
+							// Async execute mango busines layer actions.
+							mango.actions.interperActions($scope.id, actions, mango.hitch(this, function (result) {
+								var attribute, scopeid;
+								// Put the mango object values on the scope!
+								for (attribute in result.json) {
+									if (result.json.hasOwnProperty(attribute)) {
+										$scope[attribute] = result.json[attribute];
+									}
+								}
+								$scope.$digest();
+							}));
+						}, this);
+					} else {
+						mango.logger.error('The mango image galary always need an action!');
+					}
+				} else {
+					mango.logger.error('The mango image galary always need an ID tag!');
+				}
+
+				this.sendData = function () {
+				};
+
+			},
+			link: function (scope, element, attrs, controller) {
+				scope.sendData = function () {
+					controller.sendData(scope, element);
+				};
+			},
+			template: '<iframe id="{{id}}" src="{{url}}" width="{{width}}" height="{{height}}" frameborder="0" style="border:0"></iframe>',
 			replace: true
 		};
 	});
