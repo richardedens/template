@@ -1,5 +1,5 @@
 {
-    "name": "contact",
+    "name": "imagegalary",
 	"okButton": "Verzenden",
 	"cancelButton": "Annuleren",
     "settings": {
@@ -10,12 +10,13 @@
     },
     "fields": [
         {
-            "name": "comment",
-            "label": "Uw vraag",
+            "name": "src",
+            "label": "URL",
             "dbtype": "STRING",
             "tag": {
-                "name": "textarea",
-                "placeholder": "Vertel ons uw vraag?"
+                "name": "input",
+                "name": "text",
+                "placeholder": "Het bestand dat gebruikt wordt als plaatje."
             },
             "settings": {
                 "required": true,
@@ -26,12 +27,12 @@
             }
         },
         {
-            "name": "name",
+            "name": "alt",
             "label": "Uw naam",
             "tag": {
                 "name": "input",
                 "type": "text",
-                "placeholder": "Vul hier uw naam in."
+                "placeholder": "De alternatieve tekst die getoont wordt."
             },
             "dbtype": "STRING",
             "settings": {
@@ -43,12 +44,12 @@
             }
         },
         {
-            "name": "email",
-            "label": "Email",
+            "name": "width",
+            "label": "Breedte",
             "tag": {
                 "name": "input",
                 "type": "text",
-                "placeholder": "Vul hier uw email adres in."
+                "placeholder": "De breedte van het plaatje."
             },
             "dbtype": "STRING",
             "settings": {
@@ -60,29 +61,12 @@
             }
         },
         {
-            "name": "company",
-            "label": "Bedrijfsnaam*",
+            "name": "height",
+            "label": "Hoogte",
             "tag": {
                 "name": "input",
                 "type": "text",
-                "placeholder": "Vul hier uw bedrijfsnaam in."
-            },
-            "dbtype": "STRING",
-            "settings": {
-                "required": true,
-                "userRights": {
-                    "Administrator": "rw",
-                    "User": "rw"
-                }
-            }
-        },
-        {
-            "name": "telephone",
-            "label": "Telefoonnummer",
-            "tag": {
-                "name": "input",
-                "type": "text",
-                "placeholder": "Vul hier uw telefoonnummer in."
+                "placeholder": "De hoogte van het plaatje."
             },
             "dbtype": "STRING",
             "settings": {

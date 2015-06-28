@@ -1,0 +1,48 @@
+{
+    "actions": [
+        {
+            "type": "createObject",
+            "params": {
+                "name": "imagegalary"
+            },
+            "variable": "NewImageGalary"
+        },
+        {
+            "type": "changeObject",
+            "params": {
+                "variable": "NewImageGalary",
+                "set": [
+                    {
+                        "name": "src",
+                        "value": "http://www.zeeburgnieuws.nl/nieuws/images/ondergaande_zon.jpg"
+                    },
+                    {
+                        "name": "alt",
+                        "value": "Zon"
+                    },
+                    {
+                        "name": "width",
+                        "value": "320"
+                    },
+                    {
+                        "name": "height",
+                        "value": "240"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "commitObject",
+            "params": {
+                "variable": "NewImageGalary"
+            }
+        },
+        {
+            "type": "return",
+            "params": {
+                "value": "object",
+                "variable": "NewImageGalary"
+            }
+        }
+    ]
+}
